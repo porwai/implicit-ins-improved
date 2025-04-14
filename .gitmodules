@@ -1,0 +1,6 @@
+[submodule "implicit-ins"]
+	path = implicit-ins
+	url = https://github.com/john-hewitt/implicit-ins.git
+[submodule "LESS"]
+	path = LESS
+	url = https://github.com/princeton-nlp/LESS.git
