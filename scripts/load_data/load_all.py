@@ -35,10 +35,10 @@ def load_openmath(limit=10000):
 def main():
     print("📦 Loading datasets...")
 
-    save_dataset("lima", load_lima())
-    save_dataset("gsm8k", load_gsm8k())
-    save_dataset("poetry", load_poetry())
-    save_dataset("openmath_full", load_openmath(limit=10000))  # adjust limit as needed
+    # save_dataset("lima", load_lima())
+    # save_dataset("gsm8k", load_gsm8k())
+    # save_dataset("poetry", load_poetry())
+    save_dataset("openmath_full", load_openmath(limit=10000))
 
     print("🎉 All datasets loaded and saved!")
 
