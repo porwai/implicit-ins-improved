@@ -1,0 +1,26 @@
+# Ignore data files and intermediate results
+/data/*.json
+/data/*.npy
+/data/*.pt
+/data/*.csv
+
+# But allow curated files (optional)
+!data/lima.json
+!data/gsm8k.json
+
+# Ignore model checkpoints
+/results/*
+/checkpoints/*
+/outputs/*
+/models/*
+
+# Python stuff
+__pycache__/
+*.pyc
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Huggingface cache
+~/.cache/huggingface/

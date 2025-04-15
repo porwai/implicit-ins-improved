@@ -1,0 +1,71 @@
+
+---
+
+## 📚 Dataset Preparation
+
+This project uses four datasets to support instruction tuning and evaluation:
+
+- 🧠 **LIMA**: General instruction-response pairs
+- 📐 **GSM8K**: Grade school math questions
+- ✍️ **Poetry**: Poem generation from titles
+- 📊 **OpenMathInstruct-1**: Large-scale math instruction dataset (1.8M examples, we use a 10K subset)
+
+---
+
+### 🛠 How to Load All Datasets
+
+We've provided a single script to download and save all datasets in a consistent instruction-response format.
+
+#### ✅ Step-by-step:
+
+1. **Activate your environment**:
+   ```bash
+   source .venv/bin/activate
+   ```
+
+2. **Run the unified loader**:
+   ```bash
+   python scripts/load_all.py
+   ```
+
+3. **What it does**:
+   - Downloads datasets using Hugging Face `datasets` library
+   - Converts them into a standard format:
+     ```json
+     {
+       "instruction": "...",
+       "response": "..."
+     }
+     ```
+   - Saves each one to the `data/` folder:
+     - `data/lima.json`
+     - `data/gsm8k.json`
+     - `data/poetry.json`
+     - `data/openmath_full.json` (10,000 samples)
+
+---
+
+### 📂 Output Format
+
+Each JSON file contains a list of instruction-response pairs:
+```json
+[
+  {
+    "instruction": "What is 7 x 6?",
+    "response": "The answer is 42."
+  },
+  ...
+]
+```
+
+---
+
+### ⚙️ Modify the script
+
+If you want to increase the number of OpenMath examples (default: 10K), edit this line in `scripts/load_all.py`:
+```python
+save_dataset("openmath_full", load_openmath(limit=10000))
+```
+
+---
+
