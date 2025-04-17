@@ -1,7 +1,7 @@
 # Core libraries
 torch
 scipy
-numpy
+numpy==1.26.4
 packaging
 protobuf
 jsonlines

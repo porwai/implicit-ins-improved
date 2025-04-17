@@ -4,6 +4,15 @@
 /data/*.pt
 /data/*.csv
 
+data/
+
+/LESS/data/*.json
+/LESS/data/*.npy
+/LESS/data/*.pt
+/LESS/data/*.csv
+
+/LESS/data/
+
 # But allow curated files (optional)
 !data/lima.json
 !data/gsm8k.json
@@ -13,6 +22,7 @@
 /checkpoints/*
 /outputs/*
 /models/*
+/out/*
 
 # Python stuff
 __pycache__/
