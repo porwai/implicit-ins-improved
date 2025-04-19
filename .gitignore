@@ -13,6 +13,8 @@ data/
 
 /LESS/data/
 
+/LESS/wandb
+
 # But allow curated files (optional)
 !data/lima.json
 !data/gsm8k.json
